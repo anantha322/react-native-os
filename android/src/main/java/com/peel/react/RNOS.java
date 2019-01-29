@@ -45,12 +45,10 @@ public final class RNOS extends ReactContextBaseJavaModule implements LifecycleE
         reactContext.addLifecycleEventListener(this);
     }
 
-    @Override
     public String getName() {
         return TAG;
     }
 
-    @Override
     public Map<String, Object> getConstants() {
         // set constants as initial values
         final Map<String, Object> constants = new HashMap<>();
@@ -70,17 +68,15 @@ public final class RNOS extends ReactContextBaseJavaModule implements LifecycleE
         return constants;
     }
 
-    @Override
     public void onHostResume() {
         registerReceiver();
     }
 
-    @Override
     public void onHostPause() {
         unregisterReceiver();
     }
 
-    @Override
+
     public void onHostDestroy() {
         unregisterReceiver();
     }
